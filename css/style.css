@@ -1,0 +1,574 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: #000;
+}
+
+header {
+    background-color: #202020;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #e0e0e0;
+}
+
+#boven-knop {
+    position: fixed;
+    width: 3em;
+    height: 3em;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    background-color:red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#boven-knop:hover {
+    background-color: darkred;
+}
+
+/* Home pagina main code */     
+main {
+    padding: 40px 20px;
+}
+
+section {
+    margin-bottom: 50px;
+    background: #1a1a1a;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+section h2 {
+    color: red;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Home-pagina section:nth-child(1) { 
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/evander-holyfield-vs-mike-tyson2.jpg'); 
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.Home-pagina section:nth-child(1) h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.Home-pagina section:nth-child(1) p {
+    font-size: 1.4em;
+    margin-bottom: 25px;
+}
+
+.Home-pagina section:nth-child(1) button {
+    background: red;
+    color: white;
+    border-radius: 10px;
+    border-color: red;
+    border-style: solid;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.Home-pagina section:nth-child(1) button:hover {
+    background: darkred;
+}
+
+/* Geschiedenis sectie code */
+.Home-pagina section:nth-child(2){
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+}
+
+.Home-pagina section:nth-child(2) img {
+    max-width: 30%; 
+    border-radius: 10px;
+    border-color: red;
+    border-style: solid;
+    transition: transform 0.3s ease; 
+}
+
+.Home-pagina section:nth-child(2) img:hover {
+    transform: scale(1.1); 
+}
+
+
+
+.Home-pagina section:nth-child(2) div button {
+    color: white;
+    background-color: red;
+    border-style: solid;
+    border-color: red;
+    border-radius: 10px;
+    width: 10em;  
+    height: 3em;
+}
+
+.Home-pagina section:nth-child(2) div button:hover{
+    background: darkred;
+}
+
+
+/* Tekst animatie code */
+.Home-pagina section:nth-child(3){
+    background-color: #000;
+}
+  
+.Home-pagina section:nth-child(3) div {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    white-space: nowrap;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    
+    -moz-animation: tekst-animatie 20s linear infinite;
+    -webkit-animation: tekst-animatie 20s linear infinite;
+    animation: tekst-animatie 20s linear infinite;
+  }
+  
+  @-webkit-keyframes tekst-animatie {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+  
+  @keyframes tekst-animatie {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+/* Foto's van de bokers op home */
+.Home-pagina section:nth-child(4) div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Home-pagina section:nth-child(4) div img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; 
+    border-radius: 10px;
+    border-width: medium;
+    border: red;
+    border-style:solid; 
+}
+
+.Home-pagina section:nth-child(4) div img:hover {
+    transform: scale(1.1); 
+}
+
+.Home-pagina section:nth-child(4) div figure {
+    width: 30%;
+    text-align: center; 
+}
+.Home-pagina section:nth-child(4) div figcaption {
+    color: white ;
+    font-size: 1.5em;
+    padding-top: 5px;
+}
+
+
+/* Stijlen sectie code */
+.Home-pagina section:nth-child(5) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px; 
+}
+
+.Home-pagina section:nth-child(5) div{
+    color: black;
+    border-color:red; 
+    border-radius: 10px;
+    border-width: medium;
+    border-style: solid;
+    padding: 20px;
+    margin: 1em;
+    text-align: center;
+    background-color: white;
+    transform: 0.5s ease;
+}
+
+.Home-pagina section:nth-child(5) div:hover {
+    transform: scale(1.1); 
+}
+
+.Home-pagina section:nth-child(5) div h3{
+    font-size: 1.5em;
+}
+
+.Home-pagina section:nth-child(5) a{
+    text-decoration: none;
+}
+
+/* Footer code */
+footer {
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+
+/* Mobiel responsive code */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+nav ul li {
+    margin: 5px 10px; 
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block; /
+    }
+    .image-container figure {
+        width: 100%;
+    }
+}
+
+/* geschiedenis pagina code */
+.geschiedenis-pagina section:nth-child(1) h1{
+    text-align: center;
+    font-size: 4em;
+}
+
+.geschiedenis-pagina section:nth-child(1){
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/evander-holyfield-vs-mike-tyson2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+    animation-name: fadeIn;
+    animation-duration: 2s; 
+    animation-fill-mode: both;
+}
+
+.geschiedenis-pagina section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px; 
+    height: 35em;
+    animation-name: fadeIn;
+    animation-duration: 3s; 
+    animation-fill-mode: both;
+}
+
+.geschiedenis-pagina section:nth-child(2) div{
+    flex: 1; 
+    max-width: 100%; 
+    height: auto;
+}
+
+.geschiedenis-pagina section:nth-child(2) p:first-child{
+    animation-name: fadeIn;
+    animation-duration: 4s; 
+    animation-fill-mode: both;
+
+}
+
+.geschiedenis-pagina section:nth-child(2) p:nth-child(2){
+    animation-name: fadeIn;
+    animation-duration: 2s; 
+    animation-fill-mode: both;
+
+}
+.geschiedenis-pagina section:nth-child(2) p:nth-child(3){
+    animation-name: fadeIn;
+    animation-duration: 3s; 
+    animation-fill-mode: both;
+
+}
+.geschiedenis-pagina section:nth-child(2) p:nth-child(4){
+    animation-name: fadeIn;
+    animation-duration: 4s; 
+    animation-fill-mode: both;
+
+}
+
+.geschiedenis-pagina section:nth-child(2) p:nth-child(5){
+    animation-name: fadeIn;
+    animation-duration: 5s; 
+    animation-fill-mode: both;
+
+}
+
+.geschiedenis-pagina section:nth-child(2) p:last-child{
+    animation-name: fadeIn;
+    animation-duration: 6s; 
+    animation-fill-mode: both;
+
+}
+
+.geschiedenis-pagina section:nth-child(3) p{
+    animation-name: fadeIn;
+    animation-duration: 4s; 
+    animation-fill-mode: both;
+
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.geschiedenis-pagina h2{
+    animation-name: slideIn;
+    animation-duration: 3s; 
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* Equipment pagina code */
+.equipment-pagina section:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+    
+}
+
+.equipment-pagina section:first-child article{
+    background: white;
+    border-color:red; 
+    border-radius: 10px;
+    border-width: medium;
+    border-style: solid;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    height: 15em;
+}
+
+
+.equipment-pagina section:first-child article:first-child{
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/Schermafbeelding\ 2024-01-27\ 230832.png'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.equipment-pagina section:first-child article:nth-child(2){
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/download\ \(7\).jpeg'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.equipment-pagina section:first-child article:nth-child(3){
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/Forza-Sports-120-Mexican-Style-Boxing-and-MMA-Handwraps-White_136d12bd-f466-437c-bb7e-0fa63faa9d2c_1.04faa8e796e3373b04a11665af168bb5.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.equipment-pagina section:first-child article:nth-child(4){
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/61Pr+8YMmgL._AC_UF1000\,1000_QL80_.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.equipment-pagina section:first-child article:nth-child(5){
+    background: linear-gradient(
+                    rgba(0, 0, 0, 0.3), 
+                    rgba(0, 0, 0, 0.3)  
+                ),
+                url('../Images/715bNqoT5qL._AC_UF1000\,1000_QL80_.jpg'); 
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease; 
+}
+
+.equipment-pagina section:first-child article:hover {
+    transform: scale(1.1); 
+}
+
+/* Equipment pagina code */
+.equipment-pagina section:not(:first-child){
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+}
+
+
+.equipment-pagina section:not(:first-child) img {
+    flex: 1; 
+    max-width: 30%; 
+    border-radius: 10px;
+    border-color: red;
+    border-style: solid;
+    transition: transform 0.3s ease; 
+}
+
+.equipment-pagina section:not(:first-child) img:hover {
+    transform: scale(1.1); 
+}
+
+/* Bokers pagina code */
+.bokers-pagina section {
+    max-width: 100%;
+    margin: auto;
+}
+
+.bokers-pagina section h2{
+    font-size: 4em;
+}
+
+.bokers-pagina section article {
+    background: #646464;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    animation-name: slideIn;
+    animation-duration: 3s; 
+    animation-fill-mode: both;
+}
+
+.bokers-pagina section article h3 {
+    color: #f00; 
+}
+
+.bokers-pagina section div {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.bokers-pagina section article img{
+    max-width: 20%;
+    border-radius: 10px;
+    border-color: red;
+    border-style: solid;
+    transition: transform 0.3s ease; 
+}
+
+.bokers-pagina section article img:hover {
+    transform: scale(1.1); 
+}
+
+.bokers-pagina section article:nth-child(3){
+    animation-name: slideInRechts;
+    animation-duration: 3s; 
+    animation-fill-mode: both;
+}
+
+@keyframes slideInRechts {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
